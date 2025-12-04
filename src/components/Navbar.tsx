@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, ShoppingBag, Leaf } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import freshGroundsLogo from "@/assets/freshgrounds-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,12 +41,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-              <Leaf className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-serif text-xl md:text-2xl text-foreground">
-              Fresh Grounds
-            </span>
+            <img 
+              src={freshGroundsLogo} 
+              alt="Fresh Grounds Logo" 
+              className="w-10 h-10 md:w-12 md:h-12 transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
